@@ -5,9 +5,9 @@ import math
 def add_circle( points, cx, cy, cz, r, step ):
     theta = 0
     while theta<1:
-        x = r*math.cos(2*math.pi()*theta)+cx
-        y = r*math.sin(2*math.pi()*theta)+cy
-        points.append([x,y,z,1])
+        x = r*math.cos(2*math.pi*theta)+cx
+        y = r*math.sin(2*math.pi*theta)+cy
+        points.append([x,y,cz,1])
         theta+=step
 
 def add_curve( points, x0, y0, x1, y1, x2, y2, x3, y3, step, curve_type ):
