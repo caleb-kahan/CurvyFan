@@ -25,7 +25,7 @@ def make_hermite():
     [1, -2, 1, 0],
     [1, -1, 0, 0]
     ]
-    
+
     return hermite_matrix
 def generate_curve_coefs( pointMatrix, t ):
     matrix = []

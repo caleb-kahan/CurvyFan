@@ -8,7 +8,7 @@ screen = new_screen()
 color = [ 0, 255, 0 ]
 edges = []
 transform = new_matrix()
-
+ident(transform)
 # print_matrix( make_translate(3, 4, 5) )
 # print
 # print_matrix( make_scale(3, 4, 5) )
@@ -19,4 +19,4 @@ transform = new_matrix()
 # print
 # print_matrix( make_rotZ(math.pi/4) )
 
-parse_file( 'script', edges, transform, screen, color )
+parse_file( 'script2', edges, transform, screen, color )
