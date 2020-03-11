@@ -11,19 +11,15 @@ def add_circle( points, cx, cy, cz, r, step ):
         theta+=step
 
 def add_curve( points, x0, y0, x1, y1, x2, y2, x3, y3, step, curve_type ):
-    pointMatrix =
-    [[x0,y0],
-    [x1,y1],
-    [x2,y2],
-    [x3,y3]
+    pointMatrix = [
+    [x0,x1,x2,x3],
+    [y0,y1,y2,y3]
     ]
     coeffMatrix = generate_curve_coefs(pointMatrix,curve_type)
     t = 0
     while t<1:
-        x = coeffMatrix[0][0]*(t**3) + coeffMatrix[1][0]*(t**2) + coeffMatrix[2][0]*
-        +coeffMatrix[3][0]
-        y = coeffMatrix[0][1]*(t**3) + coeffMatrix[1][1]*(t**2) + coeffMatrix[2][1]*
-        +coeffMatrix[3][1]
+        x = coeffMatrix[0][0]*math.pow(t,3) + coeffMatrix[0][1]*math.pow(t,2) + coeffMatrix[0][2]*t + coeffMatrix[0][3]
+        y = coeffMatrix[1][0]*math.pow(t,3) + coeffMatrix[1][1]*math.pow(t,2) + coeffMatrix[1][2]*t + coeffMatrix[1][3]
         points.append([x,y,0,1])
         t+=step
 
@@ -47,9 +43,6 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
 
 def add_point( matrix, x, y, z=0 ):
     matrix.append( [x, y, z, 1] )
-
-
-
 
 def draw_line( x0, y0, x1, y1, screen, color ):
 
