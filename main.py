@@ -5,7 +5,7 @@ from matrix import *
 import math
 
 screen = new_screen()
-color = [ 0, 255, 0 ]
+color = [ 255, 0, 90 ]
 edges = []
 transform = new_matrix()
 ident(transform)
@@ -19,4 +19,4 @@ ident(transform)
 # print
 # print_matrix( make_rotZ(math.pi/4) )
 
-parse_file( 'script2', edges, transform, screen, color )
+parse_file( 'script', edges, transform, screen, color )
